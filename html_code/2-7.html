@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>2-7</title>
+</head>
+<body>
+<H3>其他通用规则</H3>
+<div style="text-indent:2em;line-height:2">在表达式 "\s"，"\d"，"\w"，"\b" 表示特殊意义的同时，对应的大写字母表示相反的意义。</div>
+<table width="702" border="1"  style="position: relative;left: 50px;top: 5px; border:1px solid #98bf21;">
+  <tr>
+    <td width="88">表达式</td>
+    <td width="598">可匹配</td>
+  </tr>
+  <tr>
+    <td>\S</td>
+    <td>匹配所有非空白字符（"\s" 可匹配各个空白字符）</td>
+  </tr>
+  <tr>
+    <td>\D</td>
+    <td>匹配所有的非数字字符</td>
+  </tr>
+  <tr>
+    <td>\W</td>
+    <td>匹配所有的字母、数字、下划线以外的字符</td>
+  </tr>
+  <tr>
+    <td>\B</td>
+    <td>匹配非单词边界，即左右两边都是 "\w" 范围或者左右两边都不是 "\w" 范围时的字符缝隙</td>
+  </tr>
+</table>
+<br />
+<div style="text-indent:2em;line-height:2">在表达式中有特殊意义，需要添加 "\" 才能匹配该字符本身的字符汇总。</div>
+<table width="702" border="1"  style="position: relative;left: 50px;top: 5px; border:1px solid #98bf21;">
+  <tr>
+    <td width="18">字符</td>
+    <td width="381">说明</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>匹配输入字符串的开始位置。要匹配 "^" 字符本身，请使用 "\^"</td>
+  </tr>
+  <tr>
+    <td>$</td>
+    <td>匹配输入字符串的结尾位置。要匹配 "$" 字符本身，请使用 "\$"</td>
+  </tr>
+  <tr>
+    <td>( )</td>
+    <td>标记一个子表达式的开始和结束位置。要匹配小括号，请使用 "\(" 和 "\)"</td>
+  </tr>
+  <tr>
+    <td>[ ]</td>
+    <td>用来自定义能够匹配 '多种字符' 的表达式。要匹配中括号，请使用 "\[" 和 "\]"</td>
+  </tr>
+  <tr>
+    <td>{ }</td>
+    <td>修饰匹配次数的符号。要匹配大括号，请使用 "\{" 和 "\}"</td>
+  </tr>
+  <tr>
+    <td>.</td>
+    <td>匹配除了换行符（\n）以外的任意一个字符。要匹配小数点本身，请使用 "\."</td>
+  </tr>
+  <tr>
+    <td>?</td>
+    <td>修饰匹配次数为 0 次或 1 次。要匹配 "?" 字符本身，请使用 "\?"</td>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>修饰匹配次数为至少 1 次。要匹配 "+" 字符本身，请使用 "\+"</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>修饰匹配次数为 0 次或任意次。要匹配 "*" 字符本身，请使用 "\*"</td>
+  </tr>
+  <tr>
+    <td>|</td>
+    <td>左右两边表达式之间 "或" 关系。匹配 "|" 本身，请使用 "\|"</td>
+  </tr>
+</table>
+
+</body>
+</html>

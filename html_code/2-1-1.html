@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>2-1-1</title>
+<script type="text/javascript">
+
+function check_string(thisform)
+{ 
+	var checkString = document.getElementById("testString").value
+	
+	
+	var patt = new RegExp(/c/);
+    
+    //exec方法返回的是找到的数组
+	if (patt.exec(checkString) == null){
+	  alert(false);
+	}else{
+	  alert(patt.exec(checkString));
+	  //alert(patt.exec(checkString).length);
+	  alert(checkString.indexOf(patt.exec(checkString)));
+	  alert(patt.lastIndex); 
+	  alert(true);
+	}
+
+
+}
+</script>
+</head>
+<body>
+<p>例1：表达式 "c"，在匹配字符串 "abcde" 时，匹配结果是：成功；匹配到的内容是："c"；匹配到的位置是：开始于2，结束于3。</p>
+<form id="form1" method="post">
+输入字符串: <input type="text" id="testString" size="30">
+<input type="button" value="Submit" id="myButton" onclick="check_string()" />
+
+</form>
+</body>
+
+</html>

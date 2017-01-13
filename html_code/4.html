@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>3-3</title>
+</head>
+<body>
+<H3></H3>
+
+<div style="text-indent:2em;line-height:2">1。^\d+$　　//匹配非负整数（正整数 + 0） </div>
+<div style="text-indent:2em;line-height:2">2。^[0-9]*[1-9][0-9]*$　　//匹配正整数 </div>
+<div style="text-indent:2em;line-height:2">3。^((-\d+)|(0+))$　　//匹配非正整数（负整数 + 0）</div> 
+<div style="text-indent:2em;line-height:2">4。^-[0-9]*[1-9][0-9]*$　　//匹配负整数 </div>
+<div style="text-indent:2em;line-height:2">5。^-?\d+$　　　　//匹配整数 </div>
+<div style="text-indent:2em;line-height:2">6。^\d+(\.\d+)?$　　//匹配非负浮点数（正浮点数 + 0） </div>
+<div style="text-indent:2em;line-height:2">7。^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$　　//匹配正浮点数 </div>
+<div style="text-indent:2em;line-height:2">8。^((-\d+(\.\d+)?)|(0+(\.0+)?))$　　//匹配非正浮点数（负浮点数 + 0） </div>
+<div style="text-indent:2em;line-height:2">9。^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$　　//匹配负浮点数 </div>
+<div style="text-indent:2em;line-height:2">10。^(-?\d+)(\.\d+)?$　　//匹配浮点数 </div>
+<div style="text-indent:2em;line-height:2">11。^[A-Za-z]+$　　//匹配由26个英文字母组成的字符串 </div>
+<div style="text-indent:2em;line-height:2">12。^[A-Z]+$　　//匹配由26个英文字母的大写组成的字符串 </div>
+<div style="text-indent:2em;line-height:2">13。^[a-z]+$　　//匹配由26个英文字母的小写组成的字符串 </div>
+<div style="text-indent:2em;line-height:2">14。^[A-Za-z0-9]+$　　//匹配由数字和26个英文字母组成的字符串 </div>
+<div style="text-indent:2em;line-height:2">15。^\w+$　　//匹配由数字、26个英文字母或者下划线组成的字符串 </div>
+<div style="text-indent:2em;line-height:2">16。^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$　　　　//匹配email地址 </div>
+<div style="text-indent:2em;line-height:2">17。^[a-zA-z]+://匹配(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$　　//匹配url </div>
+
+* 正则表达式用例
+  <div style="text-indent:2em;line-height:2">* 1、^\S+[a-z A-Z]$ 不能为空 不能有空格  只能是英文字母</div>
+  <div style="text-indent:2em;line-height:2">* 2、\S{6,}         不能为空 六位以上</div>
+  <div style="text-indent:2em;line-height:2">* 3、^\d+$          不能有空格 不能非数字</div>
+  <div style="text-indent:2em;line-height:2">* 4、(.*)(\.jpg|\.bmp)$ 只能是jpg和bmp格式</div>
+  <div style="text-indent:2em;line-height:2">* 5、^\d{4}\-\d{1,2}-\d{1,2}$ 只能是2004-10-22格式</div>
+  <div style="text-indent:2em;line-height:2">* 6、^[\s|\S]{20,}$ 不能为空 二十字以上</div>
+  <div style="text-indent:2em;line-height:2">* 7、^\+?[a-z0-9](([-+.]|[_]+)?[a-z0-9]+)*@([a-z0-9]+(\.|\-))+[a-z]{2,6}$邮件</div>
+  <div style="text-indent:2em;line-height:2">* 8、\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*([,;]\s*\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)* 输入多个地址用逗号或空格分隔邮件</div>
+  <div style="text-indent:2em;line-height:2">* 9、^(\([0-9]+\))?[0-9]{7,8}$电话号码7位或8位或前面有区号例如（022）87341628</div>
+  <div style="text-indent:2em;line-height:2">* 10、^[a-z A-Z 0-9 _]+@[a-z A-Z 0-9 _]+(\.[a-z A-Z 0-9 _]+)+(\,[a-z A-Z 0-9 _]+@[a-z A-Z 0-9 _]+(\.[a-z A-Z 0-9 _]+)+)*$
+ 只能是字母、数字、下划线；必须有@和.同时格式要规范 邮件</div>
+
+</div>
+
+
+
+<br/>
+
+<br/>
+</body>
+</html>

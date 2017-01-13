@@ -1,0 +1,39 @@
+﻿/********************************************************************************************************************************/
+html {margin:0px;padding:0px;background-color:#FFFFFF;}
+body {margin:0px;padding:0px;background-color:#FFFFFF;margin-left:10px;margin-top:10px;margin-right:0px;margin-bottom:0px;}
+
+/********************************************************************************************************************************/
+.dtree 
+{
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;font-size:11px;color:#666;white-space:nowrap;
+}
+
+.dtree img 
+{
+	border:0px;vertical-align:middle;
+}
+
+.dtree a 
+{
+	text-decoration:none;color:#333;/*#333;#3969ad*/
+}
+
+.dtree a.node, .dtree a.nodeSel 
+{
+	white-space:nowrap;padding:1px 2px 1px 2px;
+}
+
+.dtree a.node:hover, .dtree a.nodeSel:hover 
+{
+	text-decoration:underline;color:#ff9900;/*#333;#ff9900*/
+}
+
+.dtree a.nodeSel 
+{
+	background-color:#dce9f9;/*#c0d2ec;#dce9f9*/
+}
+
+.dtree .clip 
+{
+	overflow:hidden;
+}

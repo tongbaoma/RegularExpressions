@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>2-4</title>
+</head>
+<body>
+<H3>自定义匹配多种字符式</H3>
+<div style="text-indent:2em;"> 使用方括号 [ ] 包含一系列字符，能够匹配其中任意一个字符。用 [^ ] 包含一系列字符，则能够匹配其中字符之外的任意一个字符。同样的道理，虽然可以匹配其中任意一个，但是只能是一个，不是多个。</div>
+<br/>
+<table width="501" border="1"  style="position: relative;left: 50px;top: 5px; border:1px solid #98bf21;">
+  <tr>
+    <td width="74">表达式</td>
+    <td width="411">可匹配</td>
+  </tr>
+  <tr>
+    <td>[ab5@]</td>
+    <td>匹配 "a" 或 "b" 或 "5" 或 "@"</td>
+  </tr>
+  <tr>
+    <td>[^abc]</td>
+    <td>匹配 "a","b","c" 之外的任意一个字符</td>
+  </tr>
+  <tr>
+    <td>[f-k]</td>
+    <td>匹配 "f"~"k" 之间的任意一个字母</td>
+  </tr>
+  <tr>
+    <td>[^A-F0-3]</td>
+    <td>匹配 "A"~"F","0"~"3" 之外的任意一个字符</td>
+  </tr>
+</table>
+
+<br/>
+<br/>
+<div style="text-indent:2em;"> <a href="2-4-1.html">例6演示</a></div>
+<br/>
+<div style="text-indent:2em;"> <a href="2-4-2.html">例7演示</a></div>
+</body>
+</html>

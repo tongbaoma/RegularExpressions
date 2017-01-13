@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>3-1-3</title>
+<script type="text/javascript">
+
+function check_string(thisform)
+{ 
+	var checkString = document.getElementById("testString").value
+	
+	
+	var patt = new RegExp(/<td>(.*)<\/td>/);
+    
+    //exec方法返回的是找到的数组
+	if (patt.exec(checkString) == null){
+	  alert(false);
+	}else{
+	  alert("整个字符匹配："+ patt.exec(checkString)[0]);
+	  alert("(.*)匹配："+ patt.exec(checkString)[1]);
+	  //alert(patt.exec(checkString).length);
+	  //alert(checkString.indexOf(patt.exec(checkString)[0]));
+	  //alert(patt.lastIndex); 
+	  alert(true);
+	}
+
+
+}
+</script>
+</head>
+<body>
+<p>讨论1：用表达式"&lt;td&gt;(.*)&lt;/td&gt;"进行匹配。</p>
+<form id="form1" method="post">
+输入字符串: <input type="text" id="testString" size="30" value="<td><p>aa</p></td><td><p>bb</p></td>">
+<input type="button" value="Submit" id="myButton" onclick="check_string()" />
+
+</form>
+</body>
+
+</html>

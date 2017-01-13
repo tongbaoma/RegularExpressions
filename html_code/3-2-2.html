@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>3-2-2</title>
+<script type="text/javascript">
+
+function check_string(thisform)
+{ 
+	var checkString = document.getElementById("testString").value
+	
+	
+	var patt = new RegExp(/(\w)\1{4,}/);
+    
+    //exec方法返回的是找到的数组
+	if (patt.exec(checkString) == null){
+	  alert(false);
+	}else{
+	  alert("整个字符匹配："+ patt.exec(checkString)[0]);
+	  alert("开头(\w)匹配："+ patt.exec(checkString)[1]);
+	  alert("\1匹配："+ patt.exec(checkString)[2]);
+	  //alert(patt.exec(checkString).length);
+	  //alert(checkString.indexOf(patt.exec(checkString)[0]));
+	  //alert(patt.lastIndex); 
+	  alert(true);
+	}
+
+
+}
+</script>
+</head>
+<body>
+<p>例20：表达式 "(\w)\1{4,}" 在匹配 "aa bbbb abcdefg ccccc 111121111" 时，匹配结果是：成功；匹配到的内容是 "ccccc"。
+。</p>
+<form id="form1" method="post">
+输入字符串: <input type="text" id="testString" size="30">
+<input type="button" value="Submit" id="myButton" onclick="check_string()" />
+
+</form>
+
+<br/>
+<br/>
+<div style="text-indent:2em; font-weight:bolder;">讨论3：表达式 "(\w)\1{4,}"与 "\w{5,}" 之间的区别。</div>
+
+
+</body>
+
+</html>

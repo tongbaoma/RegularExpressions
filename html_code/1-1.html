@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>1-1</title>
+</head>
+<body>
+<H3>什么是正则表达式？</H3>
+<div style="text-indent:2em;">正则表达式（regular expression）就是用一个“字符串”来描述一个特征，然后去验证另一个“字符串”是否符合这个特征。</div>
+<br />
+<div style="text-indent:2em;">例如：表达式“ab+” 描述的特征是“一个 'a' 和 任意个 'b' ”，那么 'ab', 'abb', 'abbbbbbbbbb' 都符合这个特征。</div>
+<br />
+<br />
+<div style="text-indent:2em; color:red;">注意点：正则表达式校验的对象是否为字符类型。</div>
+<div style="text-indent:2em;">开发过程中的例子：</div>
+<div style="text-indent:2em;">Rails中代码：discount_price.to_s !~ /^\d+((\.\d)?\d?\d?)?$/,表达式的含义是较验0.001～1.000的范围</div>
+<div style="text-indent:2em;">discount_price在DB中的类型是decimal(14.3)</div>
+<br />
+<div style="text-indent:2em;"><img src="images/1.png" /></div>
+
+</body>
+</html>

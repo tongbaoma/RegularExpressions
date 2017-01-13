@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>3-2-3</title>
+<script type="text/javascript">
+
+function check_string(thisform)
+{ 
+	var checkString = document.getElementById("testString").value
+	
+	
+	var patt = new RegExp(/<(\w+)\s*(\w+(=('|").*?\4)?\s*)*>.*?<\/\1>/);
+    
+    //exec方法返回的是找到的数组
+	if (patt.exec(checkString) == null){
+	  alert(false);
+	}else{
+	  alert("整个字符匹配："+ patt.exec(checkString)[0]);
+	  alert("(\w+)匹配："+ patt.exec(checkString)[1]);
+	  alert("\w+(=('|\").*?\4匹配："+ patt.exec(checkString)[2]);
+	  alert("('|\").*?\4)：匹配"+ patt.exec(checkString)[3]);
+	  alert("('|\")匹配："+ patt.exec(checkString)[4]);
+	  //alert(patt.exec(checkString).length);
+	  //alert(checkString.indexOf(patt.exec(checkString)[0]));
+	  //alert(patt.lastIndex); 
+	  alert(true);
+	}
+
+
+}
+</script>
+</head>
+<body>
+<p>例21：表达式 "<(\w+)\s*(\w+(=('|").*?\4)?\s*)*>.*?<\1>" 在匹配 "&lt;td id='td1' style="bgcolor:white"&gt;&lt;/td&gt;" 时，匹配结果是成功。如果 "&lt;td&gt;" 与 "&lt;/td&gt;" 不配对，则会匹配失败；如果改成其他配对，也可以匹配成功</p>
+<form id="form1" method="post">
+输入字符串: <input type="text" id="testString" size="30">
+<input type="button" value="Submit" id="myButton" onclick="check_string()" />
+
+</form>
+</body>
+
+</html>

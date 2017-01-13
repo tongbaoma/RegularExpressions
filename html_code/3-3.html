@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>3-3</title>
+</head>
+<body>
+<H3>预搜索，不匹配；反向预搜索，不匹配</H3>
+<div style="text-indent:2em;line-height:2">前面2.6中，提到抽象意义的特殊符号："^"，"$"，"\b"。它们都有一个共同点，那就是：它们本身不匹配任何字符，只是对 "字符串的两头" 或者 "字符之间的缝隙" 附加了一个条件。理解到这个概念以后，下面将继续介绍另外一种对 "两头" 或者 "缝隙" 附加条件的，更加灵活的表示方法。</div>
+<div style="text-indent:2em;line-height:2"> 正向预搜索："(?=xxxxx)"，"(?!xxxxx)"</div>
+<div style="text-indent:2em;line-height:2">格式1："(?=xxxxx)"，在被匹配的字符串中，它对所处的 "缝隙" 或者 "两头" 附加的条件是：所在缝隙的右侧，必须能够匹配上 xxxxx 这部分的表达式。 <a href="3-3-1.html">例22演示</a></div>
+
+<div style="text-indent:2em;line-height:2"> 格式2："(?!xxxxx)"，所在缝隙的右侧，必须不能匹配 xxxxx 这部分表达式。<a href="3-3-2.html">例23演示</a></div>
+
+<br />
+<div style="text-indent:2em;line-height:2">反向预搜索："(?<=xxxxx)","(?< !xxxxx)"</div>
+
+<div style="text-indent:2em;line-height:2">格式1："(?<=xxxxx)"，所在缝隙的 "左侧"，必须能够匹配指定表达式，而不是去判断右侧。</div>
+<div style="text-indent:2em;line-height:2">格式2："(?< !xxxxx)"，所在缝隙的 "左侧"，必须不能匹配指定表达式。</div>
+
+<div style="text-indent:2em;line-height:2">与 "正向预搜索" 一样的是：它们都是对所在缝隙的一种附加条件，本身都不匹配任何字符。</div>
+<br/>
+
+<br/>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>2-6</title>
+</head>
+<body>
+<H3>代表抽象意义的特殊符号</H3>
+<div style="text-indent:2em;">一些符号在表达式中代表抽象的特殊意义：</div>
+<table width="646" border="1"  style="position: relative;left: 50px;top: 5px; border:1px solid #98bf21;">
+  <tr>
+    <td width="74">表达式</td>
+    <td width="556">作用</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>与字符串开始的地方匹配，不匹配任何字符。 <a href="2-6-1.html">例10演示</a></td>
+  </tr>
+  <tr>
+    <td>$</td>
+    <td>与字符串结束的地方匹配，不匹配任何字符。  <a href="2-6-2.html">例11演示</a></td>
+  </tr>
+  <tr>
+    <td>\b</td>
+    <td>匹配一个单词边界，也就是单词和空格之间的位置，不匹配任何字符。<br/>
+	    进一步说明："\b" 与 "^" 和 "$" 类似，本身不匹配任何字符，但是它要求它在匹配结果中所处位置的左右两边，其中一边是 "\w" 范围，另一边是 非"\w" 的范围。
+	    <a href="2-6-3.html">例12演示</a>
+    </td>
+  </tr>
+</table>
+<br/>
+<br/>
+<div style="text-indent:2em;">一些符号可以影响表达式内部的子表达式之间的关系：</div>
+<table width="646" border="1"  style="position: relative;left: 50px;top: 5px; border:1px solid #98bf21;">
+  <tr>
+    <td width="74">表达式</td>
+    <td width="556">作用</td>
+  </tr>
+  <tr>
+    <td>|</td>
+    <td>左右两边表达式之间 "或" 关系，匹配左边或者右边。 <a href="2-6-4.html">例12演示</a></td>
+  </tr>
+  <tr>
+    <td>( )</td>
+    <td>(1). 在被修饰匹配次数的时候，括号中的表达式可以作为整体被修饰。 <a href="2-6-5.html">例13演示</a><br/>
+	    (2). 取匹配结果的时候，括号中的表达式匹配到的内容可以被单独得到。 <a href="2-6-6.html">例14演示</a>
+	</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>3-2</title>
+</head>
+<body>
+<H3>反向引用 \1, \2...</H3>
+<div style="text-indent:2em;line-height:2">表达式在匹配时，表达式引擎会将小括号 "( )" 包含的表达式所匹配到的字符串记录下来。在获取匹配结果的时候，小括号包含的表达式所匹配到的字符串可以单独获取。</div>
+<div style="text-indent:2em;line-height:2"> 其实，"小括号包含的表达式所匹配到的字符串" 不仅是在匹配结束后才可以使用，在匹配过程中也可以使用。表达式后边的部分，可以引用前面 "括号内的子匹配已经匹配到的字符串"。引用方法是 "\" 加上一个数字。"\1" 引用第1对括号内匹配到的字符串，"\2" 引用第2对括号内匹配到的字符串……以此类推，如果一对括号内包含另一对括号，则外层的括号先排序号。换句话说，哪一对的左括号 "(" 在前，那这一对就先排序号。</div>
+<br/>
+<br/>
+<div style="text-indent:2em;"> <a href="3-2-1.html">例19演示</a></div>
+<br/>
+<div style="text-indent:2em;"> <a href="3-2-2.html">例20演示</a></div>
+<br/>
+<div style="text-indent:2em;"> <a href="3-2-3.html">例21演示</a></div>
+<br/>
+</body>
+</html>

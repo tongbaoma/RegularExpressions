@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>3-1</title>
+
+</head>
+<body>
+<H3>匹配次数中的贪婪与非贪婪</H3>
+
+
+<div name="display">
+<div style="text-indent:2em;line-height:2">贪婪模式：</div>
+<br />
+<div style="text-indent:2em;line-height:2">在使用修饰匹配次数的特殊符号时，"{m,n}", "{m,}", "?", "*", "+"几种表示方法可以使同一个表达式能够匹配不同的次数，具体匹配的次数随被匹配的字符串而定。这种重复匹配不定次数的表达式在匹配过程中，在整个表达式匹配成功的前提下,总是尽可能多的匹配，这种匹配原则就叫作 "贪婪" 模式 。</div>
+<div style="text-indent:2em;line-height:2">属于贪婪模式的量词，也叫做匹配优先量词，包括：</div>
+<div style="text-indent:2em;line-height:2">“{m,n}”、“{m,}”、“?”、“*”和“+”。</div>
+<br/>
+<div style="text-indent:2em;line-height:2">以字符串"dxxxdxxxd"为例,从应用角度分析贪婪：</div>
+<table width="702" border="1"  style="position: relative;left: 50px;top: 5px; border:1px solid #98bf21;">
+  <tr>
+    <td width="88">表达式</td>
+    <td width="598">匹配结果</td>
+  </tr>
+  <tr>
+    <td>(d)(\w+)</td>
+    <td>"\w+" 将匹配第一个 "d" 之后的所有字符 "xxxdxxxd"。 <a href="3-1-1.html">例15演示</a></td>
+  </tr>
+  <tr>
+    <td>(d)(\w+)(d)</td>
+    <td>"\w+" 将匹配第一个 "d" 和最后一个 "d" 之间的所有字符 "xxxdxxx"。 <a href="3-1-2.html">例16演示</a><br/>
+	     虽然"\w+" 也能够匹配上最后一个 "d"，但是为了使整个表达式匹配成功，"\w+" 可以 "让出" 它本来能够匹配的最后一个 "d"</td>
+  </tr>
+</table>
+<br/>
+<br/>
+<div style="text-indent:2em;line-height:2">非贪婪模式：</div>
+<br />
+<div style="text-indent:2em;line-height:2">在修饰匹配次数的特殊符号后再加上一个 "?" 号，，在整个表达式匹配成功的前提,则可以使匹配次数不定的表达式尽可能少的匹配，使可匹配可不匹配的表达式，尽可能的 "不匹配"。这种匹配原则叫作 "非贪婪" 模式，也叫作 "勉强" 模式(懒惰模式或惰性模式)。如果少匹配就会导致整个表达式匹配失败的时候，与贪婪模式类似，非贪婪模式会最小限度的再匹配一些，以使整个表达式匹配成功。</div>
+<div style="text-indent:2em;line-height:2">属于非贪婪模式的量词，也叫做匹配优先量词，包括：</div>
+<div style="text-indent:2em;line-height:2">“{m,n}?”、“{m,}?”、“??”、“*?”和“+?”。</div>
+<br/>
+<div style="text-indent:2em;line-height:2">以字符串"dxxxdxxxd"为例,从应用角度分析非贪婪模式：</div>
+<table width="763" border="1"  style="position: relative;left: 50px;top: 5px; border:1px solid #98bf21;">
+  <tr>
+    <td width="88">表达式</td>
+    <td width="659">匹配结果</td>
+  </tr>
+  <tr>
+    <td>(d)(\w+?)</td>
+    <td>"\w+?" 将尽可能少的匹配第一个 "d" 之后的字符，结果是："\w+?" 只匹配了一个 "x"。 <a href="3-1-3.html">例17演示</a></td>
+  </tr>
+  <tr>
+    <td>(d)(\w+?)(d)</td>
+    <td>为了让整个表达式匹配成功，"\w+?" 不得不匹配 "xxx" 才可以让后边的 "d" 匹配，从而使整个表达式匹配成功。因此，结果是："\w+?" 匹配 "xxx"。 <a href="3-1-4.html">例18演示</a></td>
+  </tr>
+</table>
+<br/>
+<br/>
+<!--
+<div style="text-indent:2em;">小讨论：以字符串"&lt;td&gt;&lt;p&gt;aa&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;bb&lt;/p&gt;&lt;/td&gt;"为例:</div>
+<div style="text-indent:2em;">讨论1：用表达式"&lt;td&gt;(.*)&lt;/td&gt;"进行匹配，结果是什么？ <a href="test-1.html">讨论1演示</a></div>
+<br/>
+<div style="text-indent:2em;">讨论2：用表达式"&lt;td&gt;(.*?)&lt;/td&gt;"进行匹配，结果是什么？ <a href="test-2.html">讨论2演示</a></div>
+-->
+</div>
+</body>
+</html>
